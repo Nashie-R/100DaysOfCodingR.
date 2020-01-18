@@ -1,0 +1,64 @@
+---
+title: "Day1"
+author: "Nashipae Waweru"
+date: "1/10/2020"
+output: html_document
+---
+
+## R Markdown
+
+#LOADING BASE PACKAGES.
+library(rmarkdown)
+library(pacman)
+library(datasets)
+
+#LOADING CONTRIBUTED PACKAGES.
+pacman::p_load(pacman, knitr, tidyverse, tidyr, dplyr, GGally, ggvis, httr, ggthemes)
+
+#GENERAL SUMMARIES OF THE DATA.
+head(iris)
+tail(iris)
+summary(iris)
+table(iris)
+
+#BASIC GRAPHICS USING PLOT().
+
+#Help for plot().
+?plot
+
+plot(iris)
+
+#General plot for Categorical variables.
+plot(iris$Species)
+
+#General plot for quantitative variables.
+plot(iris$Sepal.Length)
+plot(iris$Sepal.Width)
+plot(iris$Petal.Length)
+plot(iris$Petal.Width)
+
+#General plot using two variables.
+plot(iris$Species, iris$Sepal.width)
+plot(iris$Petal.Length, iris$Petal.Width)
+
+#Plot according to the user like.
+plot(iris$Species, iris$Petal.Width,
+      col = "#FF3399",
+      xlab = "Species",
+      ylab = "Petal Width")
+      
+#Plot mathematical formulas using plot().
+plot(cos,pi,0)
+
+#Alternatively
+plot(cos , pi, 0,
+     col = "#FF3399",
+     lwd = 5,
+     xlab = "Degrees",
+     ylab = "Cosine")
+     
+#Further
+plot(dnorm, -5, 5)
+plot(sin, 2*pi, 0)
+plot(exp, 1, 5)
+
